@@ -35,7 +35,7 @@ This project implements a user login REST API using the Nest.js framework with T
 ### Installation
 
 ```bash
-- [Docker](https://www.docker.com/) installed on your machine.
+$ git clone git@github.com:lvxi0/nest-user.git
 ```
 
 ### Running the app
@@ -67,10 +67,20 @@ $ npm run test:cov
 
 - **POST /auth/login**: Perform user login with a username and password. Returns a JWT token on successful login.
 
+### Creating Seed Data
+
+```bash
+# navigate to mongoDB
+$ cd mongoDB/
+
+# run the seed data script
+$ ./create_db.sh
+```
+
 ### Example
 
 ```bash
-curl -X POST http://localhost:3000/auth/login -d '{"username": "User1", "password": "Password-1"}'
+curl -X POST http://localhost:3000/auth/login -d '{"username": "User1", "password": "Password-11"}'
 ```
 Use this example command to make a login request using the cURL tool.
 
